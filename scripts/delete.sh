@@ -3,7 +3,7 @@
 CDIR=$(cd `dirname "$0"` && pwd)
 cd "$CDIR"
 
-CLUSTER_ID=${CLUSTER_ID:-2wf0ps1s}
+CLUSTER_ID=$1
 
 eval "SCW_ORG=${SCW_ORG} SCW_TOKEN=${SCW_TOKEN} ./config/scw.sh"
 eval "CF_API_KEY=${CF_API_KEY} CF_API_EMAIL=${CF_API_EMAIL} BASE_DOMAIN=${BASE_DOMAIN} ./config/cfcli.sh"
