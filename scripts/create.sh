@@ -31,9 +31,8 @@ TARGET_HOSTS=$node1,$node2,$node3
 HOST_USER=${HOST_USER:-root}
 SSH_KEY_PATH=${SSH_KEY_PATH:-~/.ssh/id_rsa}
 
-BASE_DOMAIN=$domain
-RANCHER=true
-LONGHORN_CLIENT_ID=${LONGHORN_CLIENT_ID:-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
-LONGHORN_CLIENT_SECRET=${LONGHORN_CLIENT_SECRET:-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
-
+BASE_DOMAIN=$domain \
+RANCHER=true \
+LONGHORN_CLIENT_ID=${LONGHORN_CLIENT_ID:-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx} \
+LONGHORN_CLIENT_SECRET=${LONGHORN_CLIENT_SECRET:-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx} \
 /usr/local/src/kube-assembler/assemble.sh
